@@ -43,7 +43,8 @@ resource "docker_image" "foo" {
       foo = "bar"
     }
     squash       = true
-    cache_from   = ["fooCacheFrom", "barCacheFrom"]
+    cache_from   = ["user/app:cache", "type=local,src=path/to/dir"]
+    cache_to     = ["user/app:cache", "type=local,dest=path/to/dir"]
     security_opt = ["fooSecurityOpt", "barSecurityOpt"]
     extra_hosts  = ["fooExtraHost", "barExtraHost"]
     target       = "fooTarget"

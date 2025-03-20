@@ -319,6 +319,16 @@ func resourceDockerImage() *schema.Resource {
 								Description: "The image",
 							},
 						},
+						"cache_to": {
+							Type:        schema.TypeList,
+							Description: "Targets to consider as cache destinations",
+							Optional:    true,
+							ForceNew:    true,
+							Elem: &schema.Schema{
+								Type:        schema.TypeString,
+								Description: "The target",
+							},
+						},
 						"security_opt": {
 							Type:        schema.TypeList,
 							Description: "The security options",

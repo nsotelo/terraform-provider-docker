@@ -112,6 +112,7 @@ Optional:
 - `build_args` (Map of String) Pairs for build-time variables in the form TODO
 - `build_id` (String) BuildID is an optional identifier that can be passed together with the build request. The same identifier can be used to gracefully cancel the build with the cancel request.
 - `cache_from` (List of String) Images to consider as cache sources
+- `cache_to` (List of String) Targets to consider as cache destinations
 - `cgroup_parent` (String) Optional parent cgroup for the container
 - `cpu_period` (Number) The length of a CPU period in microseconds
 - `cpu_quota` (Number) Microseconds of CPU time that the container can get in a CPU period

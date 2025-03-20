@@ -186,6 +186,7 @@ func createImageBuildOptions(buildOptions map[string]interface{}) types.ImageBui
 	buildImageOptions.Labels = mapOfInterfacesToMapOfStrings(buildOptions["labels"].(map[string]interface{}))
 	buildImageOptions.Squash = buildOptions["squash"].(bool)
 	buildImageOptions.CacheFrom = interfaceArrayToStringArray(buildOptions["cache_from"].([]interface{}))
+	buildImageOptions.CacheTo = interfaceArrayToStringArray(buildOptions["cache_to"].([]interface{}))
 	buildImageOptions.SecurityOpt = interfaceArrayToStringArray(buildOptions["security_opt"].([]interface{}))
 	buildImageOptions.ExtraHosts = interfaceArrayToStringArray(buildOptions["extra_hosts"].([]interface{}))
 	buildImageOptions.Target = buildOptions["target"].(string)
